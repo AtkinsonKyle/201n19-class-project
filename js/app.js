@@ -6,12 +6,12 @@ var askName = prompt('What is your name?').toLowerCase();
 askUserName();
 
 function askUserName() {
-  //ASK FOR USERNAME
+
 
   document.write('<h2>Hello ' + askName + ', these are your results:</h2>');
 }
 
-//INTRO TO QUESTIONS
+
 alert('Prepare for a challenge ' + askName + '!');
 var CA = 0;
 var IA = 0;
@@ -19,7 +19,7 @@ var IA = 0;
 askQ1();
 
 function askQ1() {
-  //FIRST QUESTION
+
   var myName = prompt('Is the author of this webpage\'s name kyle?');
 
   if (myName.toLowerCase() === 'yes' || myName.toLowerCase() === 'y') {
@@ -36,7 +36,7 @@ function askQ1() {
 askQ2();
 
 function askQ2() {
-  //SECOND QUESTION
+
   var military = prompt('Did I serve in the United States Coast Guard?');
 
   if (military.toLowerCase() === 'no' || military.toLowerCase() === 'n') {
@@ -49,13 +49,13 @@ function askQ2() {
     IA++;
 
   }
-  //console.log(military);
+
 }
 
 askQ3();
 
 function askQ3() {
-  //THIRD QUESTION
+
   var job = prompt('Was my last job at Top Pot?');
 
   if (job.toLowerCase() === 'no' || job.toLowerCase() === 'n') {
@@ -68,13 +68,13 @@ function askQ3() {
     IA++;
 
   }
-  //console.log(job);
+
 }
 
 askQ4();
 
 function askQ4() {
-  //FOURTH QUESTION
+
   var diploma = prompt('Did I get my high school diploma at R.J. Reynolds?');
 
   if (diploma.toLowerCase() === 'no' || diploma.toLowerCase() === 'n') {
@@ -87,13 +87,13 @@ function askQ4() {
     IA++;
 
   }
-  //console.log(diploma);
+
 }
 
 askQ5();
 
 function askQ5() {
-  //FIFTH QUESTION
+
   var Japan = prompt('Did I serve in Japan?');
 
   if (Japan.toLowerCase() === 'yes' || Japan.toLowerCase() === 'y') {
@@ -105,19 +105,19 @@ function askQ5() {
     alert('Incorrect');
     IA++;
   }
-  //console.log(Japan);
+
 }
 
 numberGame();
 
 function numberGame() {
-  //NUMBER GAME
+
   var trys = 4;
   var dive = prompt('How deep have I ever dove underwater, it\'s a number between 150\' and 170\'?');
   var feet = 164;
   var Q6CorrAns = false;
 
-  //START PROMPTING
+
   while (trys > 0) {
     var guesses = Number(prompt(`${dive} You have ${trys} guesses left.`));
     trys--;
@@ -131,7 +131,6 @@ function numberGame() {
     else {
       dive = 'That\'s wrong, try again!';
 
-      // HIGH OR LOW PROMPTS
       if (guesses > feet) {
         dive += `The depth is shallower than your guess, try again! ${trys} guesses left.`;
       }
@@ -140,7 +139,7 @@ function numberGame() {
       }
     }
   }
-  //MARVEL END GAME
+
   if (Q6CorrAns === false) {
     alert(`Sorry, ${feet} is the correct depth. It's not only cold but very dark!`);
     IA++;
@@ -167,7 +166,7 @@ else {
 askQ7();
 
 function askQ7() {
-  //7TH QUESTION
+
   var favBand = prompt('Guess one of my top four favorite bands!');
   var bands = ['led zeppelin', 'greta van fleet', 'system of a down', 'rage against the machine'];
   var attemptsQ7 = 6;
