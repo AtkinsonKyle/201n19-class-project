@@ -58,7 +58,7 @@ function askQ3() {
   //THIRD QUESTION
   var job = prompt('Was my last job at Top Pot?');
 
-  if (job.toLowerCase() === 'no') {
+  if (job.toLowerCase() === 'no' || job.toLowerCase() === 'n') {
     alert('Correct');
     CA++;
 
@@ -77,7 +77,7 @@ function askQ4() {
   //FOURTH QUESTION
   var diploma = prompt('Did I get my high school diploma at R.J. Reynolds?');
 
-  if (diploma.toLowerCase() === 'no') {
+  if (diploma.toLowerCase() === 'no' || diploma.toLowerCase() === 'n') {
     alert('Correct');
     CA++;
 
@@ -96,7 +96,7 @@ function askQ5() {
   //FIFTH QUESTION
   var Japan = prompt('Did I serve in Japan?');
 
-  if (Japan.toLowerCase() === 'yes') {
+  if (Japan.toLowerCase() === 'yes' || Japan.toLowerCase() === 'y') {
     alert('Correct');
     CA++;
 
@@ -129,20 +129,21 @@ function numberGame() {
       Q6CorrAns = true;
     }
     else {
-      //  alert('That\'s wrong, try again!');
+      dive = 'That\'s wrong, try again!';
 
       // HIGH OR LOW PROMPTS
       if (guesses > feet) {
-        prompt('That\'s too deep, try again!');
+        dive += `The depth is shallower than your guess, try again! ${trys} guesses left.`;
       }
       if (guesses < feet) {
-        prompt('The depth is greater than your guess, try again!');
+        dive += `The depth is greater than your guess, try again! ${trys} guesses left.`;
       }
     }
   }
   //MARVEL END GAME
   if (Q6CorrAns === false) {
     alert(`Sorry, ${feet} is the correct depth. It's not only cold but very dark!`);
+    IA++;
   }
 }
 
